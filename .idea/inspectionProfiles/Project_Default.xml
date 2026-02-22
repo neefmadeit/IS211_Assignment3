@@ -1,0 +1,24 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="aiohttp" />
+          <option value="asyncio" />
+          <option value="python-dotenv" />
+          <option value="rich" />
+          <option value="httpx" />
+          <option value="aiodns" />
+          <option value="aiofiles" />
+          <option value="tqdm" />
+          <option value="pandas" />
+          <option value="jinja2" />
+          <option value="pyyaml" />
+          <option value="aiomultiprocess" />
+          <option value="beautifulsoup4" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
