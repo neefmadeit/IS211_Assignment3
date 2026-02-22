@@ -73,7 +73,6 @@ def is_image_path(path: str) -> bool:
         return False
     return bool(IMAGE_PATTERN.search(path))
 
-
 def parse_datetime(dt_str: str) -> datetime | None:
     """
     Parse 'MM/DD/YYYY HH:MM:SS' into a datetime.
@@ -84,7 +83,6 @@ def parse_datetime(dt_str: str) -> datetime | None:
         return datetime.strptime(dt_str.strip(), "%m/%d/%Y %H:%M:%S")
     except ValueError:
         return None
-
 
 def process_csv_text(csv_text: str):
     """
@@ -163,7 +161,6 @@ def pick_most_popular_browser(browser_counts: Counter) -> tuple[str, int] | None
     best = max(present, key=lambda x: (x[1], -candidates.index(x[0])))
     return best
 
-
 def main():
     parser = argparse.ArgumentParser(
         description="Download and analyze a web log CSV (image % and most popular browser; list hours by hits)."
@@ -222,7 +219,7 @@ def main():
     # Create list of (hour, count) and sort by count desc, hour asc
     sorted_hours = sorted(hour_counts.items(), key=lambda x: (-x[1], x[0]))
     for hour, count in sorted_hours:
-        # Leading zero for single digit hours to match expected format (e.g., "Hour 03")
+        # Leading zero for single digit hours to match expected format.
         print(f"Hour {hour:02d} has {count} hits")
 
 if __name__ == "__main__":
